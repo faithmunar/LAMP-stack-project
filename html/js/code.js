@@ -46,7 +46,7 @@ function doLogin()
 
 				saveCookie();
 	
-				window.location.href = "color.html";
+				window.location.href = "contact.html";
 			}
 		};
 		xhr.send(jsonPayload);
@@ -222,4 +222,5 @@ function doRegister()
 		document.getElementById("registerResult").innerHTML = err.message;
 	}
 }
+
 
