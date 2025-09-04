@@ -1,8 +1,5 @@
 <?php
 	$inData = getRequestInfo();
-	
-	$color = $inData["color"];
-	$userId = $inData["userId"];
 
 	$firstName = $inData["firstName"];
 	$lastName = $inData["lastName"];
@@ -42,3 +39,4 @@
 	}
 	
 ?>
+
