@@ -16,6 +16,13 @@
 		$stmt = $conn->prepare("INSERT into Users (FirstName,LastName,Login,Password) VALUES(?,?,?,?)");
 		$stmt->bind_param("ssss", $firstName,$lastName, $login, $password);
 		$stmt->execute();
+
+		if ($stmt->execute()) {
+            returnWithError("User added successfully.");
+        } else {
+            returnWithError("Execute failed: " . $stmt->error);
+        }
+
 		$stmt->close();
 		$conn->close();
 		returnWithError("");
@@ -39,4 +46,3 @@
 	}
 	
 ?>
-
