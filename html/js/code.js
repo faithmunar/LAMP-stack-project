@@ -189,4 +189,36 @@ function openRegister()
 	window.location.href = "register.html";
 }
 
+function doRegister()
+{
+	let newUsername = document.getElementById("registerName").value;
+	let newPassword = document.getElementById("registerPassword").value;
+	let newFirstName = document.getElementById("firstName").value;
+	let newLastName = document.getElementById("lastName").value;
+	
+	document.getElementById("colorAddResult").innerHTML = "";
 
+	let tmp = {login:newUsername,password:newPassword,firstname:newFirstName,lastname:newLastName,userId,userId};
+	let jsonPayload = JSON.stringify( tmp );
+
+	let url = urlBase + '/Register.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				document.getElementById("registerResult").innerHTML = "New user has been added";
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("registerResult").innerHTML = err.message;
+	}
+}
