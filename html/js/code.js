@@ -183,3 +183,9 @@ function searchColor()
 	}
 	
 }
+
+function openRegister()
+{
+	window.location.href = "register.html";
+}
+
