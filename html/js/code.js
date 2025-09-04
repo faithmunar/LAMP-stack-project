@@ -1,4 +1,4 @@
-const urlBase = 'http://134.199.193.253/LAMPAPI';
+const urlBase = 'http://4331group19.xyz/LAMPAPI';
 const extension = 'php';
 
 let userId = 0;
@@ -188,4 +188,5 @@ function openRegister()
 {
 	window.location.href = "register.html";
 }
+
 
