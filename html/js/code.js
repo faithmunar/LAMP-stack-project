@@ -198,7 +198,7 @@ function doRegister()
 	
 	document.getElementById("colorAddResult").innerHTML = "";
 
-	let tmp = {login:newUsername,password:newPassword,firstname:newFirstName,lastname:newLastName,userId,userId};
+	let tmp = {login:newUsername,password:newPassword,firstName:newFirstName,lastName:newLastName,userId,userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/Register.' + extension;
@@ -222,3 +222,4 @@ function doRegister()
 		document.getElementById("registerResult").innerHTML = err.message;
 	}
 }
+
