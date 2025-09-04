@@ -196,7 +196,7 @@ function doRegister()
 	let newFirstName = document.getElementById("firstName").value;
 	let newLastName = document.getElementById("lastName").value;
 	
-	document.getElementById("colorAddResult").innerHTML = "";
+	document.getElementById("registerResult").innerHTML = "";
 
 	let tmp = {login:newUsername,password:newPassword,firstName:newFirstName,lastName:newLastName,userId,userId};
 	let jsonPayload = JSON.stringify( tmp );
@@ -222,5 +222,6 @@ function doRegister()
 		document.getElementById("registerResult").innerHTML = err.message;
 	}
 }
+
 
 
