@@ -47,6 +47,7 @@ body
     width: 50%;
     margin-left: 25%;
     font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 15px;
 }
 
 .buttons:hover{
@@ -137,4 +138,5 @@ select{
     margin-bottom: 1%;
     font-family: 'Ubuntu', sans-serif;
     color: #95060a;
+
 }
