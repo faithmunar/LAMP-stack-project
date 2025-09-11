@@ -58,9 +58,7 @@ body
     width: 50%;
     margin-left: 25%;
     font-family: 'Ubuntu', sans-serif;
-=======
     margin-bottom: 15px;
->>>>>>> 5885d23 (tried to fix the return to login button and added vertical padding for buttons)
 }
 
 .buttons:hover{
@@ -153,3 +151,4 @@ select{
     color: #95060a;
 
 }
+
