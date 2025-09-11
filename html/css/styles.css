@@ -18,7 +18,7 @@ body
     position: relative;
     width: 500px;
     height: 500px;
-    background: url("html/images/pineapple.png");
+    background: url("../images/pineapple.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
