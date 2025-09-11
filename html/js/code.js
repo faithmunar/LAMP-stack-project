@@ -234,3 +234,8 @@ function doRegister()
 		document.getElementById("registerResult").innerHTML = err.message;
 	}
 }
+
+function openLogin()
+{
+	window.location.href = "index.html";
+}
