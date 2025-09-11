@@ -1,6 +1,6 @@
 body 
 {
-    background-image: url("https://raw.githubusercontent.com/faithmunar/LAMP-stack-project/main/html/images/beach.png");
+    background-image: url("../images/beach.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
