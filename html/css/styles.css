@@ -1,6 +1,8 @@
 body 
 {
-    background-color: #707070;
+    background-image: url("html/images/beach.png");
+    background-repeat: no repeat;
+    background-size: cover;
 }
 
 #title 
@@ -16,8 +18,8 @@ body
 #pineappleContainer
 {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     background: url("../images/pineapple.png");
     background-repeat: no-repeat;
     background-position: center;
