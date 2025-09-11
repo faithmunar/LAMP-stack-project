@@ -231,4 +231,16 @@ function doRegister()
 function openLogin()
 {
 	window.location.href = "index.html";
+
+}
+
+function addContact()
+{
+	let newPhoneNumber = document.getElementById("registerPhoneNumber").value;
+	let newEmail = document.getElementById("registerEmail").value;
+	let newFirstName = document.getElementById("firstName").value;
+	let newLastName = document.getElementById("lastName").value;
+
+	let tmp = {firstName:newFirstName,lastName:newLastName,email:newEmail,phone:newPhoneNumber,userId:userId};
+	
 }
