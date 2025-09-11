@@ -224,7 +224,8 @@ function doRegister()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("registerResult").innerHTML = "New user has been added";
+				let jsonObject = JSON.parse( xhr.responseText );
+				document.getElementById("registerResult").innerHTML = jsonObject.error;
 			}
 		};
 		xhr.send(jsonPayload);
