@@ -160,8 +160,8 @@ function searchContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("contactSearchResult").innerHTML = "Contact(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
+				document.getElementById("contactSearchResult").innerHTML = jsonObject.error;
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
