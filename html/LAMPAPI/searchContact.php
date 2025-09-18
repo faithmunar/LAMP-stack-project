@@ -3,6 +3,7 @@
 $inData = getRequestInfo();
 	
 	$searchResults = "";
+	$contactIDs = "";
 	$searchCount = 0;
     $userId = $inData["userId"];
 
@@ -25,9 +26,11 @@ $inData = getRequestInfo();
 			if($searchCount > 0)
 			{
 				$searchResults .= ",";
+				$contactIDs .- ",";
 			}
 			$searchCount++;
 			$searchResults .= '"' . $row["FirstName"] . ' ' . $row["LastName"] . ' ' . $row["Phone"] . ' ' . $row["Email"] .'"';
+			$contactIDs .= $row["ID"];
 		}
 		
 		if( $searchCount == 0 )
@@ -56,14 +59,13 @@ $inData = getRequestInfo();
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"results":[], "error":"' . $err . '"}';
+		$retValue = '{"results":[], "ID":[], "error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $searchResults )
+	function returnWithInfo($searchResults, $contactIDs)
 	{
-		$retValue = '{"results":[' . $searchResults . '],"error":""}';
+		$retValue = '{"results":[' . $searchResults . '], "ID":[' . $contactIDs . '], "error":""}';
 		sendResultInfoAsJson( $retValue );
-	}
-	
+	}	
 ?>
