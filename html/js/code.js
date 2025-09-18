@@ -166,6 +166,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i];
+					contactList += " <button>Delete</button>";
 					if( i < jsonObject.results.length - 1 )
 					{
 						contactList += "<br />\r\n";
@@ -269,3 +270,4 @@ function addContact()
 	}
 
 }
+
