@@ -21,6 +21,7 @@ $inData = getRequestInfo();
 
 		$result = $stmt->get_result();
 
+		// Iterates through each Contact that contains the searchKeyword
 		while($row = $result->fetch_assoc())
 		{
 			if($searchCount > 0)
@@ -29,6 +30,8 @@ $inData = getRequestInfo();
 				$contactIDs .- ",";
 			}
 			$searchCount++;
+			
+			// Adds the contact to the result array and to a ID array
 			$searchResults .= '"' . $row["FirstName"] . ' ' . $row["LastName"] . ' ' . $row["Phone"] . ' ' . $row["Email"] .'"';
 			$contactIDs .= $row["ID"];
 		}

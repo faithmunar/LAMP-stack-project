@@ -16,10 +16,11 @@
 
         if($stmt->execute() === TRUE)
         {
-            if($stmt->affected_rows > 1)
-                returnWithMessage("More than one entry deleted");
-            else
+            // ID's should be unique, so no more than 1 should be deleted
+            if($stmt->affected_rows == 1)
                 returnWithMessage("Deletion Successful");
+            else
+                returnWithMessage("More than one entry deleted");
         }
         else
             returnWithMessage("Contact not found");

@@ -20,10 +20,11 @@
 
         if($stmt->execute() === TRUE)
         {
-            if($stmt->affected_rows > 1)
-                returnWithMessage("More than one entry edited");
-            else
+            // ID's should be unique, so no more than 1 should be edited
+            if($stmt->affected_rows == 1)
                 returnWithMessage("Edit Successful");
+            else
+                returnWithMessage("More than one entry edited");
         }
         else
             returnWithMessage("Contact not found");
