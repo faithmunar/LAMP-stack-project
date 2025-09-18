@@ -50,7 +50,7 @@ body
     width: 70%;
     margin-left: 15%;
     padding: 25px;
-    background-color: #b2b2b2;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #accessUIDiv
@@ -59,7 +59,7 @@ body
     width: 70%;
     margin-left: 15%;
     padding: 25px;
-    background-color: #b2b2b2;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .buttons
@@ -88,27 +88,27 @@ body
 }
 #searchText
 {
-	font-size: 30px;
+	font-size: 25px;
 }
 #colorText
 {
-	font-size: 30px;
+	font-size: 25px;
 }
 #firstName
 {
-	font-size: 30px;
+	font-size: 25px;
 }
 #lastName
 {
-    font-size: 30px;
+    font-size: 25px;
 }
 #registerEmail
 {
-    font-size: 30px;
+    font-size: 25px;
 }
 #registerPhoneNumber
 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
