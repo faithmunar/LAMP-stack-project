@@ -203,7 +203,6 @@ body.logged-in {
     padding: 10px 14px;
     border-radius: 28px;
     background: #f6f6f6;
-    width: fit-content;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
