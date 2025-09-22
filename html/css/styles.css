@@ -129,7 +129,7 @@ input[type="text"],input[type="password"]{
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #3BC84C;
+    color: #2FC31F;
 }
 
 #loginResult{
@@ -140,7 +140,7 @@ input[type="text"],input[type="password"]{
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #D9EAD3;
+    color: #EE2C2C;
 }
 
 #userName{
@@ -189,5 +189,6 @@ body.logged-in {
 #addContact{
     display:none;
 }
+
 
 
