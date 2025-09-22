@@ -161,9 +161,7 @@ function openRegister()
 }
 
 function doRegister()
-{
-	
-            
+{         
 	let newUsername = document.getElementById("registerName").value;
 	let newPassword = document.getElementById("registerPassword").value;
 	let newFirstName = document.getElementById("firstName").value;
@@ -240,6 +238,7 @@ function addContact()
 	}
 }
 
+<<<<<<< HEAD
 function deleteContact()
 {
 	let newContactID = document.getElementById("__TEMP__").value;
@@ -306,4 +305,9 @@ function editContact()
 	{
 		document.getElementById("__TEMP__").innerHTML = err.message;
 	}
+=======
+function showTable()
+{
+	document.getElementById("addContact").style.display = "block";
+>>>>>>> b2e48ca (add show table)
 }
