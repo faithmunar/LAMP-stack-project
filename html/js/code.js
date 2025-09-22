@@ -138,7 +138,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i].join(" ");
-					contactList += '<button type="button" id="logoutButton" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Log Out </button>';
+					contactList += '<button type="button" id="logoutButton" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>';
 					if( i < jsonObject.results.length - 1 )
 					{
 						contactList += "<br />\r\n";
@@ -240,9 +240,9 @@ function addContact()
 	}
 }
 
-function deleteContact()
+function deleteContact(contactID)
 {
-	let newContactID = document.getElementById("__TEMP__").value;
+	let newContactID = document.getElementById(contactID).value;
 
 	let tmp = {contactID:newContactID};
 
@@ -261,14 +261,14 @@ function deleteContact()
 			if (this.readyState == 4 && this.status == 200) 
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
-				document.getElementById("__TEMP__").innerHTML = jsonObject.error;
+				document.getElementById(contactID).innerHTML = jsonObject.error;
 			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		document.getElementById("__TEMP__").innerHTML = err.message;
+		document.getElementById(contactID).innerHTML = err.message;
 	}
 }
 
@@ -314,4 +314,5 @@ function showTable()
 	document.getElementById("addContact").style.display = "block";
 
 }
+
 
