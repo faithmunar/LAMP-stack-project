@@ -180,5 +180,10 @@ select{
 
 }
 
+body.logged-in {
+	background-image: url("../images/huts.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 
