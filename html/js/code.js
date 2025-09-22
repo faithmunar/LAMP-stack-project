@@ -138,6 +138,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i];
+					contactList += '<button type="button" id="logoutButton" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Log Out </button>';
 					if( i < jsonObject.results.length - 1 )
 					{
 						contactList += "<br />\r\n";
@@ -311,4 +312,5 @@ function editContact()
 function showTable()
 {
 	document.getElementById("addContact").style.display = "block";
+
 }
