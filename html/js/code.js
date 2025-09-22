@@ -108,37 +108,6 @@ function doLogout()
 	window.location.href = "index.html";
 }
 
-function addColor()
-{
-	let newColor = document.getElementById("colorText").value;
-	document.getElementById("colorAddResult").innerHTML = "";
-
-	let tmp = {color:newColor,userId,userId};
-	let jsonPayload = JSON.stringify( tmp );
-
-	let url = urlBase + '/AddColor.' + extension;
-	
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	try
-	{
-		xhr.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				document.getElementById("colorAddResult").innerHTML = "Color has been added";
-			}
-		};
-		xhr.send(jsonPayload);
-	}
-	catch(err)
-	{
-		document.getElementById("colorAddResult").innerHTML = err.message;
-	}
-	
-}
-
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
@@ -148,6 +117,8 @@ function searchContact()
 
 	let tmp = {search:srch,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
+
+	console.log(jsonPayload);
 
 	let url = urlBase + '/searchContact.' + extension;
 	
@@ -166,7 +137,6 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i];
-					contactList += " <button>Delete</button>";
 					if( i < jsonObject.results.length - 1 )
 					{
 						contactList += "<br />\r\n";
@@ -259,7 +229,7 @@ function addContact()
 			if (this.readyState == 4 && this.status == 200) 
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
-				document.getElementById("contactAddResult").innerHTML = "Contact Added";
+				document.getElementById("contactAddResult").innerHTML = jsonObject.error;
 			}
 		};
 		xhr.send(jsonPayload);
@@ -268,6 +238,72 @@ function addContact()
 	{
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
-
 }
 
+function deleteContact()
+{
+	let newContactID = document.getElementById("__TEMP__").value;
+
+	let tmp = {contactID:newContactID};
+
+	let jsonPayload = JSON.stringify(tmp);
+
+	let url = urlBase + '/deleteContact.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let jsonObject = JSON.parse( xhr.responseText );
+				document.getElementById("__TEMP__").innerHTML = jsonObject.error;
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("__TEMP__").innerHTML = err.message;
+	}
+}
+
+function editContact()
+{
+	let newPhoneNumber = document.getElementById("registerPhoneNumber").value;
+	let newEmail = document.getElementById("registerEmail").value;
+	let newFirstName = document.getElementById("firstName").value;
+	let newLastName = document.getElementById("lastName").value;
+	let newContactID = document.getElementById("__TEMP__").value;
+
+	let tmp = {firstName:newFirstName,lastName:newLastName,email:newEmail,phone:newPhoneNumber,contactID:newContactID};
+
+	let jsonPayload = JSON.stringify(tmp);
+
+	let url = urlBase + '/editContact.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let jsonObject = JSON.parse( xhr.responseText );
+				document.getElementById("__TEMP__").innerHTML = jsonObject.error;
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("__TEMP__").innerHTML = err.message;
+	}
+}
