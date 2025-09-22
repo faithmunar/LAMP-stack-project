@@ -32,7 +32,8 @@ $inData = getRequestInfo();
 			$searchCount++;
 
 			// Adds the contact to the result array and to a ID array
-			$searchResults .= '"' . $row["FirstName"] . ' ' . $row["LastName"] . ' ' . $row["Phone"] . ' ' . $row["Email"] .'"';
+			$searchResults .= '["' . $row["FirstName"] . '","' . $row["LastName"] . '","' . $row["Phone"] . '","' . $row["Email"] .'"]';
+			//$searchResults .= '"' . $row["FirstName"] . ' ' . $row["LastName"] . ' ' . $row["Phone"] . ' ' . $row["Email"] .'"';
 			$contactIDs .= '"' . $row["ID"] . '"';
 		}
 
