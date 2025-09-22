@@ -129,7 +129,7 @@ input[type="text"],input[type="password"]{
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #2FC31F;
+    color: #3BC84C;
 }
 
 #loginResult{
@@ -140,7 +140,7 @@ input[type="text"],input[type="password"]{
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #EE2C2C;
+    color: #D9EAD3;
 }
 
 #userName{
@@ -190,5 +190,14 @@ body.logged-in {
     display:none;
 }
 
+#search{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    width: fit-content;
+}
 
 
