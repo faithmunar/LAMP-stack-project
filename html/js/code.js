@@ -95,6 +95,7 @@ function readCookie()
 	}
 	else
 	{
+		document.body.classlist.add("logged-in");
 //		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
 	}
 }
@@ -306,4 +307,5 @@ function editContact()
 	{
 		document.getElementById("__TEMP__").innerHTML = err.message;
 	}
+
 }
