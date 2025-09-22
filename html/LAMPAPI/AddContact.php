@@ -7,6 +7,13 @@
 	$email = $inData["email"];
 	$userId = $inData["userId"];
 
+	// Makes sure phone number only includes digits
+	if(ctype_digit($phone) == false && empty($phone) == false)
+	{
+		returnWithError("Only use numbers for phone number");
+		die();
+	}
+
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
 	{
