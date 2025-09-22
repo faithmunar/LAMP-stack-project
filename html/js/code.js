@@ -238,7 +238,6 @@ function addContact()
 	}
 }
 
-<<<<<<< HEAD
 function deleteContact()
 {
 	let newContactID = document.getElementById("__TEMP__").value;
@@ -305,9 +304,9 @@ function editContact()
 	{
 		document.getElementById("__TEMP__").innerHTML = err.message;
 	}
-=======
+}
+
 function showTable()
 {
 	document.getElementById("addContact").style.display = "block";
->>>>>>> b2e48ca (add show table)
 }
