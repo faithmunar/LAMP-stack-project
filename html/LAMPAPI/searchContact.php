@@ -1,7 +1,7 @@
 <?php
 
 $inData = getRequestInfo();
-	
+
 	$searchResults = "";
 	$contactIDs = "";
 	$searchCount = 0;
@@ -27,22 +27,22 @@ $inData = getRequestInfo();
 			if($searchCount > 0)
 			{
 				$searchResults .= ",";
-				$contactIDs .- ",";
+				$contactIDs .= ",";
 			}
 			$searchCount++;
-			
+
 			// Adds the contact to the result array and to a ID array
 			$searchResults .= '"' . $row["FirstName"] . ' ' . $row["LastName"] . ' ' . $row["Phone"] . ' ' . $row["Email"] .'"';
-			$contactIDs .= $row["ID"];
+			$contactIDs .= '"' . $row["ID"] . '"';
 		}
-		
+
 		if( $searchCount == 0 )
 		{
 			returnWithError( "No Records Found" );
 		}
 		else
 		{
-			returnWithInfo( $searchResults );
+			returnWithInfo( $searchResults, $contactIDs );
 		}
 		
 		$stmt->close();
