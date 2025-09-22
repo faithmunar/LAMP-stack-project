@@ -186,4 +186,8 @@ body.logged-in {
 	background-size: cover;
 }
 
+#addContact{
+    display:none;
+}
+
 
