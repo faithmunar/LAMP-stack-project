@@ -80,35 +80,41 @@ body
 
 #loginName
 {
-	font-size: 25px;
+	font-size: 20px;
 }
 #loginPassword
 {
-	font-size: 25px;
+	font-size: 20px;
 }
 #searchText
 {
-	font-size: 25px;
+	font-size: 20px;
 }
 #colorText
 {
-	font-size: 25px;
+	font-size: 20px;
 }
 #firstName
 {
-	font-size: 25px;
+	font-size: 20px;
 }
 #lastName
 {
-    font-size: 25px;
+    font-size: 20px;
 }
 #registerEmail
 {
-    font-size: 25px;
+    font-size: 20px;
 }
 #registerPhoneNumber
 {
-    font-size: 25px;
+    font-size: 20px;
+}
+#registerName{
+    font-size: 20px;
+}
+#registerPassword{
+    font-size: 20px;
 }
 
 
