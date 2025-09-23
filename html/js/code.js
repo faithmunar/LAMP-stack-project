@@ -244,6 +244,11 @@ function deleteContact(contactID)
 {
 	//let newContactID = document.getElementById(contactID).value;
 
+	let confirmDelete = confirm("Are you sure you want to delete this contact?");
+    if (!confirmDelete) {
+        return;
+    }
+
 	let tmp = {contactID:contactID};
 
 	let jsonPayload = JSON.stringify(tmp);
