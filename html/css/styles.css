@@ -72,6 +72,23 @@ body
     margin-bottom: 15px;
 }
 
+.buttonSearch
+{
+    font-size: 25px;
+    border-radius: 25px;
+    width: 50%;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 15px;
+}
+
+.buttonAdd
+{
+    font-size: 25px;
+    border-radius: 25px;
+    width: 20%;
+    margin-bottom: 15px;
+}
+
 .buttons:hover{
     background-color: #00d5124f;
     color: #FFFFFF;
@@ -110,10 +127,12 @@ body
 {
     font-size: 20px;
 }
-#registerName{
+#registerName
+{
     font-size: 20px;
 }
-#registerPassword{
+#registerPassword
+{
     font-size: 20px;
 }
 
