@@ -277,17 +277,12 @@ body.logged-in
     top: 10px;          
 }
 
-#table {
+table {
     width: 100%;
     border-collapse: collapse;
 }
 
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
+td, th {
     border: 1px solid #ddd;
     padding: 8px;
 }
