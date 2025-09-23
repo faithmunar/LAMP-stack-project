@@ -214,13 +214,19 @@ body.logged-in {
 }
 
 #ContactButton{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#ContactButton:hover{
+    background-color: #00d5124f;
+    color: #FFFFFF;
+    opacity: 50%;
 }
 
 #search{
@@ -236,6 +242,12 @@ body.logged-in {
     border-radius: 20px;
     margin-right: 25%;
     padding: 8px 12px;
+}
+
+#search button{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: #abf7ec;
 }
 
 .skip-link {
