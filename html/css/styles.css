@@ -226,7 +226,7 @@ body.logged-in
 
 #ContactButton
 {
-    width: 50px;
+    width: 60px;
     height: 50px;
     border-radius: 50%;
     padding: 0;
@@ -259,7 +259,7 @@ body.logged-in
 #search button{
     padding: 8px 12px;
     border: 1px solid #ccc;
-    background: #abf7ec;
+    background: #e3e3e3;
 }
 
 .skip-link {

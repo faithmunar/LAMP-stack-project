@@ -150,8 +150,12 @@ function searchContact()
                         <td>${contact[2]}</td>
                         <td>${contact[3]}</td>
                         <td>
-                            <button type="button" class="buttons" onclick=editContact(${jsonObject.ID[i]});"> Edit </button>
-							<button type="button" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>
+                            <button type="button" class="ContactButton" onclick=editContact(${jsonObject.ID[i]});"> 
+								<i class="fa-solid fa-trash"></i>
+							</button>
+							<button type="button" class="ContactButton" onclick="deleteContact(${jsonObject.ID[i]});"> 
+								<i class="fa-solid fa-user-pen"></i>
+							 </button>
                         </td>
                     `;
                     tbody.appendChild(row);
