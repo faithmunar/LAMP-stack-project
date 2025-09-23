@@ -72,23 +72,6 @@ body
     margin-bottom: 15px;
 }
 
-.buttonSearch
-{
-    font-size: 25px;
-    border-radius: 25px;
-    width: 50%;
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 15px;
-}
-
-.buttonAdd
-{
-    font-size: 25px;
-    border-radius: 25px;
-    width: 20%;
-    margin-bottom: 15px;
-}
-
 .buttons:hover{
     background-color: #00d5124f;
     color: #FFFFFF;
@@ -215,14 +198,36 @@ body.logged-in {
     display:none;
 }
 
+#addContactButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #search{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 1opx;
     padding: 10px 14px;
     border-radius: 28px;
     background: #f6f6f6;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: fit-content;
+}
+
+#search input{
+    border-radius: 20px 0 0 20px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+#search button{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: white;
 }
 
 .skip-link {
