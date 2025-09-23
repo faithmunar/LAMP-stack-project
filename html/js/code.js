@@ -151,28 +151,12 @@ function searchContact()
                         <td>${contact[3]}</td>
                         <td>${contact[4]}</td>
                         <td>
-                            <button type="button" class="buttons"
-                                    onclick="deleteContact(${jsonObject.ID[i]});">
-                                Delete
-                            </button>
+                            <button type="button" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>
                         </td>
                     `;
-
                     tbody.appendChild(row);
                 }
 			}
-				/*for( let i=0; i<jsonObject.results.length; i++ )
-				{
-					contactList += jsonObject.results[i].join(" ");
-					contactList += `<button type="button" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>`;
-					if( i < jsonObject.results.length - 1 )
-					{
-						contactList += "<br />\r\n";
-					}
-				}
-				
-				document.getElementsByTagName("p")[0].innerHTML = contactList;
-			}*/
 		};
 		xhr.send(jsonPayload);
 	}
@@ -343,7 +327,4 @@ function editContact()
 function showTable()
 {
 	document.getElementById("addContact").style.display = "block";
-
 }
-
-
