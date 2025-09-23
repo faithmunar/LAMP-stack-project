@@ -282,17 +282,17 @@ body.logged-in
     border-collapse: collapse;
 }
 
-.td {
+td {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.th {
+th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.th {
+th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
