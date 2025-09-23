@@ -242,9 +242,9 @@ function addContact()
 
 function deleteContact(contactID)
 {
-	let newContactID = document.getElementById(contactID).value;
+	//let newContactID = document.getElementById(contactID).value;
 
-	let tmp = {contactID:newContactID};
+	let tmp = {contactID:contactID};
 
 	let jsonPayload = JSON.stringify(tmp);
 
