@@ -135,7 +135,33 @@ function searchContact()
 				let jsonObject = JSON.parse( xhr.responseText );
 				document.getElementById("contactSearchResult").innerHTML = jsonObject.error;
 				
-				for( let i=0; i<jsonObject.results.length; i++ )
+                const tbody = document.getElementById("contactBody");
+                tbody.innerHTML = "";
+
+                for (let i = 0; i < jsonObject.results.length; i++)
+                {
+                    const row = document.createElement("tr");
+
+                    const contact = jsonObject.results[i];
+
+                    row.innerHTML = `
+                        <td>${contact[0]}</td>
+                        <td>${contact[1]}</td>
+                        <td>${contact[2]}</td>
+                        <td>${contact[3]}</td>
+                        <td>${contact[4]}</td>
+                        <td>
+                            <button type="button" class="buttons"
+                                    onclick="deleteContact(${jsonObject.ID[i]});">
+                                Delete
+                            </button>
+                        </td>
+                    `;
+
+                    tbody.appendChild(row);
+                }
+			}
+				/*for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i].join(" ");
 					contactList += `<button type="button" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>`;
@@ -146,7 +172,7 @@ function searchContact()
 				}
 				
 				document.getElementsByTagName("p")[0].innerHTML = contactList;
-			}
+			}*/
 		};
 		xhr.send(jsonPayload);
 	}
