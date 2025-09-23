@@ -244,6 +244,11 @@ function addContact()
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
 				document.getElementById("contactAddResult").innerHTML = jsonObject.error;
+
+				if (!jsonObject.error) 
+				{ 
+                    document.getElementById("addContact").style.display = "none";
+				}
 			}
 		};
 		xhr.send(jsonPayload);
