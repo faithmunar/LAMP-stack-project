@@ -138,7 +138,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
 					contactList += jsonObject.results[i].join(" ");
-					contactList += '<button type="button" id="logoutButton" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>';
+					contactList += `<button type="button" class="buttons" onclick="deleteContact(${jsonObject.ID[i]});"> Delete </button>`;
 					if( i < jsonObject.results.length - 1 )
 					{
 						contactList += "<br />\r\n";
