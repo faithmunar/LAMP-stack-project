@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 	<title>Add Contacts</title>
 	<script type="text/javascript" src="js/code.js"></script>
@@ -14,42 +16,42 @@
 	</script>
 	
 </head>
+
 <body>
 
-<h1 id="title">Add Contacts</h1>
+	<h1 id="title">Add Contacts</h1>
 
-<div id="loggedInDiv">
-	<span id="userName"></span><br />
-	<button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
-</div>
-
-
-
-<div id="accessUIDiv">
-	<div id="search">
-		<input type="text" id="searchText" placeholder="Contact To Search For"/>
-		<button type="button" id="searchContactButton" class="buttonSearch" onclick="searchContact();">
-			<i class="fa fa-magnifying-glass"></i>
-		</button>
-	</div>
-		<span id="contactSearchResult"></span>
-		<p id="contactList"></p>
-
-	<div>
-		<button type="button" id="addContactForm" class="buttonAdd" onclick="showTable()">
-			<i class="fa fa-user-plus"></i>
-		</button>
+	<div id="loggedInDiv">
+		<span id="userName"></span><br />
+		<button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
 	</div>
 
-	<div id="addContact">
-		<input type="text" id="firstName" placeholder="First Name">
-		<input type="text" id="lastName" placeholder="Last Name">
-		<input type="text" id="registerPhoneNumber" placeholder="Phone Number">
-		<input type="text" id="registerEmail" placeholder="Email">
-		<button type="button" id="addContactButton" class="buttons" onclick="addContact();"> Add Contact </button><br />
-		<span id="contactAddResult"></span>
+	<div id="accessUIDiv">
+		<div id="search">
+			<input type="text" id="searchText" placeholder="Contact To Search For"/>
+			<button type="button" id="searchContactButton" class="buttonSearch" onclick="searchContact();">
+				<i class="fa fa-magnifying-glass"></i>
+			</button>
+		</div>
+			<span id="contactSearchResult"></span>
+			<p id="contactList"></p>
+
+		<div>
+			<button type="button" id="addContactForm" class="buttonAdd" onclick="showTable()">
+				<i class="fa fa-user-plus"></i>
+			</button>
+		</div>
+
+		<div id="addContact">
+			<input type="text" id="firstName" placeholder="First Name">
+			<input type="text" id="lastName" placeholder="Last Name">
+			<input type="text" id="registerPhoneNumber" placeholder="Phone Number">
+			<input type="text" id="registerEmail" placeholder="Email">
+			<button type="button" id="addContactButton" class="buttons" onclick="addContact();"> Add Contact </button><br />
+			<span id="contactAddResult"></span>
+		</div>
 	</div>
-</div>
 
 </body>
+
 </html>
