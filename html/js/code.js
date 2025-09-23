@@ -95,7 +95,7 @@ function readCookie()
 	}
 	else
 	{
-		document.body.classlist.add("logged-in");
+		document.body.classList.add("logged-in");
 //		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
 	}
 }

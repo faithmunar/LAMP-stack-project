@@ -62,8 +62,8 @@ body
 #loggedInDiv
 {
     font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left:8%;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.7);
 }
@@ -71,8 +71,8 @@ body
 #accessUIDiv
 {
     font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 8%;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.7);
 }
