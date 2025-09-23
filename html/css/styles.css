@@ -87,7 +87,8 @@ body
 	font-family: 'Ubuntu', sans-serif;
 }
 
-.buttons:hover{
+.buttons:hover
+{
     background-color: #00d5124f;
     color: #FFFFFF;
     opacity: 50%;
@@ -135,7 +136,8 @@ body
 }
 
 
-input[type="text"],input[type="password"]{
+input[type="text"],input[type="password"]
+{
     border-radius: 25px;
     text-align: center;
     width: 80%;
@@ -144,7 +146,8 @@ input[type="text"],input[type="password"]{
     font-family: 'Ubuntu', sans-serif;
 }
 
-#inner-title{
+#inner-title
+{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;
@@ -155,7 +158,8 @@ input[type="text"],input[type="password"]{
     color: #3BC84C;
 }
 
-#loginResult{
+#loginResult
+{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;
@@ -166,19 +170,22 @@ input[type="text"],input[type="password"]{
     color: #D9EAD3;
 }
 
-#userName{
+#userName
+{
     display: inline-block;
     width: 80%;
     margin-left: 10%;
     text-align: center;
 }
 
-#logoutButton{
+#logoutButton
+{
     width: 20%;
     margin-left: 40%;
 }
 
-select{
+select
+{
     width: 30%;
     margin-left: 35%;
     margin-top: 2%;
@@ -186,11 +193,13 @@ select{
     font-family: 'Ubuntu', sans-serif;
 }
 
-#colorSearchResult{
+#colorSearchResult
+{
     display: none;
 }
 
-#colorAddResult{
+#colorAddResult
+{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;
@@ -203,17 +212,20 @@ select{
 
 }
 
-body.logged-in {
+body.logged-in 
+{
 	background-image: url("../images/huts.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#addContact{
+#addContact
+{
     display:none;
 }
 
-#ContactButton{
+#ContactButton
+{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -232,7 +244,7 @@ body.logged-in {
 #search{
     display: flex;
     align-items: center;
-    gap: 1opx;
+    gap: 5px;
     padding: 10px 14px;
     border-radius: 28px;
     background: #f6f6f6;
@@ -263,4 +275,27 @@ body.logged-in {
 }
 .skip-link:focus {
     top: 10px;          
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #c3d2ee;
+    color: white;
 }
