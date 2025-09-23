@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
 	<title>Contact Manager</title>
 	<script type="text/javascript" src="js/md5.js"></script>
@@ -12,8 +12,8 @@
 <div id="pineappleContainer">
 	<div id="loginDiv">
 		<h2 id="inner-title">PLEASE LOG IN</span>
-		<input type="text" id="loginName" placeholder="Username" /><br />
-		<input type="password" id="loginPassword" placeholder="Password"/><br />
+		<input type="text" id="loginName" aria-label="Username" placeholder="Username" /><br />
+		<input type="password" id="loginPassword" aria-label="Password" placeholder="Password"/><br />
 		<button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Log in </button>
 		<button type="button" id="registerButton" class="buttons" onclick="openRegister();"> Register new account </button>
 		<span id="loginResult"></span>
