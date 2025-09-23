@@ -32,8 +32,8 @@ body
 #loginDiv
 {
     font-size: 30px;
-    width: 50%;
-    height: 35%;
+    width: 60%;
+    height: 38%;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
@@ -80,43 +80,43 @@ body
 
 #loginName
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 #loginPassword
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 #searchText
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 #colorText
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 #firstName
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 #lastName
 {
-    font-size: 20px;
+    font-size: 25px;
 }
 #registerEmail
 {
-    font-size: 20px;
+    font-size: 25px;
 }
 #registerPhoneNumber
 {
-    font-size: 20px;
+    font-size: 25px;
 }
 #registerName
 {
-    font-size: 20px;
+    font-size: 25px;
 }
 #registerPassword
 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -124,7 +124,6 @@ input[type="text"],input[type="password"]{
     border-radius: 25px;
     text-align: center;
     width: 80%;
-    margin-left: 10%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
 }
