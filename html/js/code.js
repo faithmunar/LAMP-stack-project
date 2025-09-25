@@ -221,10 +221,15 @@ function openLogin()
 
 function addContact()
 {
-	let newPhoneNumber = document.getElementById("registerPhoneNumber").value;
-	let newEmail = document.getElementById("registerEmail").value;
-	let newFirstName = document.getElementById("firstName").value;
-	let newLastName = document.getElementById("lastName").value;
+	let newPhoneNumber = document.getElementById("registerPhoneNumber").value.trim();
+	let newEmail = document.getElementById("registerEmail").value.trim();
+	let newFirstName = document.getElementById("firstName").value.trim();
+	let newLastName = document.getElementById("lastName").value.trim();
+
+	if (!newFirstName || !newLastName || !newPhoneNumber || !newEmail) {
+	    document.getElementById("contactAddResult").textContent = "Please fill in all fields before adding a contact.";
+	    return;
+  	}
 
 	let tmp = {firstName:newFirstName,lastName:newLastName,email:newEmail,phone:newPhoneNumber,userId:userId};
 
@@ -346,3 +351,4 @@ function showTable()
 	document.getElementById("addContact").style.display = "block";
 
 }
+
