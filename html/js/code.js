@@ -247,6 +247,14 @@ function addContact()
 
 				if (!jsonObject.error) 
 				{ 
+					document.getElementById("registerPhoneNumber").value = "";
+				  	document.getElementById("registerEmail").value = "";
+				  	document.getElementById("firstName").value = "";
+				  	document.getElementById("lastName").value = "";
+
+          
+         			document.getElementById("firstName").focus();
+					searchContact();
                     document.getElementById("addContact").style.display = "none";
 				}
 			}
@@ -336,4 +344,5 @@ function editContact()
 function showTable()
 {
 	document.getElementById("addContact").style.display = "block";
+
 }
