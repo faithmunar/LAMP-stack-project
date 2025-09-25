@@ -150,6 +150,8 @@ input[type="text"],input[type="password"]
 {
     display: inline-block;
     font-size: 0.8em;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     width: 90%;
     text-align: center;
     margin-left: 5%;
@@ -162,12 +164,14 @@ input[type="text"],input[type="password"]
 {
     display: inline-block;
     font-size: 0.8em;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     width: 90%;
     text-align: center;
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #D9EAD3;
+    color: #E53935;
 }
 
 #userName
@@ -293,4 +297,5 @@ th {
     text-align: left;
     background-color: #73b9e5;
     color: white;
+
 }
