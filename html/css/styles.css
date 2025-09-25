@@ -221,6 +221,9 @@ body.logged-in
 	background-image: url("../images/huts.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	background-color: #b9d6e0;
 }
 
 #addContact
@@ -299,3 +302,4 @@ th {
     color: white;
 
 }
+
