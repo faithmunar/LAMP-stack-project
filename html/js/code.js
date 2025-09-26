@@ -257,7 +257,7 @@ function addContact()
 				  	document.getElementById("firstName").value = "";
 				  	document.getElementById("lastName").value = "";
 
-          
+          			searchContact();
          			document.getElementById("firstName").focus();
 				}
 			}
@@ -358,6 +358,7 @@ function showTable()
 	    addContactDiv.style.display = "none";
 	}
 }
+
 
 
 
