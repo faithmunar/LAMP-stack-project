@@ -150,7 +150,7 @@ function searchContact()
                         <td>${contact[2]}</td>
                         <td>${contact[3]}</td>
                         <td>
-                            <button type="button" class="ContactButton" aria-label="Edit Contact" onclick=editContact(${jsonObject.ID[i]});"> 
+                            <button type="button" class="ContactButton" aria-label="Edit Contact" onclick=showEditFields(${contact[0]}, ${contact[1]}, ${contact[2]}, ${contact[3]}, ${jsonObject.ID[i]});">
 								<i class="fa-solid fa-user-pen"></i>
 							</button>
 							<button type="button" class="ContactButton" aria-label="Delete Contact" onclick="deleteContact(${jsonObject.ID[i]});"> 
@@ -312,13 +312,13 @@ function deleteContact(contactID)
 	searchContact();
 }
 
-function editContact()
+function editContact(contactID)
 {
 	let newPhoneNumber = document.getElementById("registerPhoneNumber").value;
 	let newEmail = document.getElementById("registerEmail").value;
 	let newFirstName = document.getElementById("firstName").value;
 	let newLastName = document.getElementById("lastName").value;
-	let newContactID = document.getElementById("__TEMP__").value;
+	let newContactID = contactID;
 
 	let tmp = {firstName:newFirstName,lastName:newLastName,email:newEmail,phone:newPhoneNumber,contactID:newContactID};
 
@@ -358,6 +358,12 @@ function showTable()
 	    addContactDiv.style.display = "none";
 	}
 }
+
+function showEditFields(firstName, lastName, phoneNumber, email, contactID) 
+{
+
+}
+
 
 
 
