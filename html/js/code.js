@@ -259,8 +259,6 @@ function addContact()
 
           
          			document.getElementById("firstName").focus();
-					searchContact();
-                    document.getElementById("addContact").style.display = "none";
 				}
 			}
 		};
@@ -271,8 +269,8 @@ function addContact()
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
 
-	searchContact();
 	showTable();
+	searchContact();
 }
 
 function deleteContact(contactID)
@@ -360,6 +358,7 @@ function showTable()
 	    addContactDiv.style.display = "none";
 	}
 }
+
 
 
 
