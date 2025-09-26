@@ -270,6 +270,8 @@ function addContact()
 	{
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
+
+	searchContact();
 }
 
 function deleteContact(contactID)
@@ -353,5 +355,6 @@ function showTable()
 	document.getElementById("addContact").style.display = "block";
 
 }
+
 
 
