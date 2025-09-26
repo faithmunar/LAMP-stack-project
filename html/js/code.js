@@ -272,6 +272,7 @@ function addContact()
 	}
 
 	searchContact();
+	showTable();
 }
 
 function deleteContact(contactID)
@@ -352,9 +353,14 @@ function editContact()
 
 function showTable()
 {
-	document.getElementById("addContact").style.display = "block";
-
+	const addContactDiv = document.getElementById("addContact");
+	if (addContactDiv.style.display === "none" || addContactDiv.style.display === "") {
+	    addContactDiv.style.display = "block";
+	} else {
+	    addContactDiv.style.display = "none";
+	}
 }
+
 
 
 
