@@ -304,6 +304,23 @@ th {
 
 }
 
+.edit-input{
+  width: 95%;
+  font-size: 1em;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+
+.row-status{
+  margin-top: 6px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.row-status.success{ color: #2e7d32; }
+.row-status.error{   color: #e53935; }
+
+
+
 
 
 
