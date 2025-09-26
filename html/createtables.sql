@@ -43,6 +43,13 @@ INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
 	VALUES ('Beth','Bethington','2345678901','beth@beth.gov',1);
 INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
 	VALUES ('Charlie','Charles','3456789012','charles@charles.uk',1);
+INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
+	VALUES ('Addition','Subtraction','1234567890','math@smart.com',1);
+INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
+	VALUES ('Beth Two','Son of Beth','2345678901','iwill@return.net',1);
+INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
+	VALUES ('Yujus','Losthugame','3456789012','admin@gmail.com',1);
+
 
 INSERT INTO Contacts(FirstName,LastName,Phone,Email,UserID)
 	VALUES ('Debbie','Little','3456789012','deb@us.mil',2);
