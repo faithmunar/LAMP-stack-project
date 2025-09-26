@@ -13,8 +13,9 @@ body
     width: 100%;
     margin: 20px 0;
     text-align: center;
-    font-family: 'Oi', sans-serif;
+    font-family: 'Antigua', sans-serif;
     color: #FFFFFF;
+    text-shadow: 6px 6px 4px #000000;
 }
  
 #pineappleContainer
