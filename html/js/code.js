@@ -150,10 +150,10 @@ function searchContact()
                         <td>${contact[2]}</td>
                         <td>${contact[3]}</td>
                         <td>
-                            <button type="button" class="ContactButton" onclick=editContact(${jsonObject.ID[i]});"> 
+                            <button type="button" class="ContactButton" aria-label="Edit Contact" onclick=editContact(${jsonObject.ID[i]});"> 
 								<i class="fa-solid fa-user-pen"></i>
 							</button>
-							<button type="button" class="ContactButton" onclick="deleteContact(${jsonObject.ID[i]});"> 
+							<button type="button" class="ContactButton" aria-label="Delete Contact" onclick="deleteContact(${jsonObject.ID[i]});"> 
 								<i class="fa-solid fa-trash"></i>
 							 </button>
                         </td>
