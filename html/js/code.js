@@ -307,6 +307,8 @@ function deleteContact(contactID)
 	{
 		document.getElementById(contactID).innerHTML = err.message;
 	}
+
+	searchContact();
 }
 
 function editContact()
@@ -351,4 +353,5 @@ function showTable()
 	document.getElementById("addContact").style.display = "block";
 
 }
+
 
