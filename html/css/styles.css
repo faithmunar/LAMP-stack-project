@@ -231,23 +231,6 @@ body.logged-in
     display:none;
 }
 
-.ContactButton
-{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ContactButton:hover{
-    background-color: #00d5124f;
-    color: #FFFFFF;
-    opacity: 50%;
-}
-
 #search{
     display: flex;
     align-items: center;
@@ -298,7 +281,7 @@ th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #2626ED;
+    background-color: #41d9ff;
     color: white;
 
 }
