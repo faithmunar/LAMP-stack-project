@@ -266,6 +266,8 @@ function addContact()
 	{
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
+
+  showTable();
 }
 
 function deleteContact(contactID){
