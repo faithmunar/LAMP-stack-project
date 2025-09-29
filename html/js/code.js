@@ -267,7 +267,9 @@ function addContact()
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
 
-  showTable();
+	showTable();
+	searchContact();
+	
 }
 
 function deleteContact(contactID){
@@ -291,6 +293,8 @@ function deleteContact(contactID){
     }
   };
   xhr.send(jsonPayload);
+
+  searchContact();
 }
 
 
@@ -448,3 +452,4 @@ function showRowStatus(text, tr, kind){
   el.className = 'row-status ' + (kind === 'error' ? 'error' : 'success');
   setTimeout(()=>{ el.textContent=''; el.className='row-status'; }, 2000);
 }
+
