@@ -248,15 +248,10 @@ function addContact()
 				let jsonObject = JSON.parse( xhr.responseText );
 				document.getElementById("contactAddResult").innerHTML = jsonObject.error;
 
-				if (!jsonObject.error) 
+				if (jsonObject.error === "Successfully added to contacts" || !jsonObject.error) 
 				{ 
-          /*
-					document.getElementById("registerPhoneNumber").value = "";
-				  document.getElementById("registerEmail").value = "";
-				  document.getElementById("firstName").value = "";
-				  document.getElementById("lastName").value = "";
-          */
-
+          showTable();
+          clearInputs();
           searchContact();
          	document.getElementById("firstName").focus();
 				}
@@ -268,9 +263,6 @@ function addContact()
 	{
 		document.getElementById("contactAddResult").innerHTML = err.message;
 	}
-
-	showTable();
-  clearInputs();
 	
 }
 
@@ -286,9 +278,10 @@ function deleteContact(contactID){
   xhr.onreadystatechange = function(){
     if (this.readyState === 4 && this.status === 200){
       const res = JSON.parse(xhr.responseText || "{}");
-      if (!res.error){
+      if (res.error === "Deletion Successful" || !res.error){
         const tr = document.querySelector(`tr[data-id="${contactID}"]`);
         if (tr) tr.remove();
+        searchContact();
       } else {
         alert(res.error);
       }
@@ -296,7 +289,6 @@ function deleteContact(contactID){
   };
   xhr.send(jsonPayload);
 
-  searchContact();
 }
 
 
