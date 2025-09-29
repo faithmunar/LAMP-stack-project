@@ -250,13 +250,15 @@ function addContact()
 
 				if (!jsonObject.error) 
 				{ 
+          /*
 					document.getElementById("registerPhoneNumber").value = "";
-				  	document.getElementById("registerEmail").value = "";
-				  	document.getElementById("firstName").value = "";
-				  	document.getElementById("lastName").value = "";
+				  document.getElementById("registerEmail").value = "";
+				  document.getElementById("firstName").value = "";
+				  document.getElementById("lastName").value = "";
+          */
 
-          			searchContact();
-         			document.getElementById("firstName").focus();
+          searchContact();
+         	document.getElementById("firstName").focus();
 				}
 			}
 		};
@@ -268,7 +270,7 @@ function addContact()
 	}
 
 	showTable();
-	searchContact();
+  clearInputs();
 	
 }
 
@@ -453,3 +455,9 @@ function showRowStatus(text, tr, kind){
   setTimeout(()=>{ el.textContent=''; el.className='row-status'; }, 2000);
 }
 
+function clearInputs(){
+  document.getElementById("registerPhoneNumber").value = "";
+  document.getElementById("registerEmail").value = "";
+	document.getElementById("firstName").value = "";
+  document.getElementById("lastName").value = "";
+}
