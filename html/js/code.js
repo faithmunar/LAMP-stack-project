@@ -188,7 +188,6 @@ function doRegister()
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/Register.' + extension;
-	//let url = 'http://4331group19.xyz/LAMPAPI/Register.php';
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -373,7 +372,7 @@ function saveEditFields(btn, contactID) {
   }
 
   // POST to editContact
-  const payload = { contactID, firstName:first, lastName:last, phone, email };
+  const payload = { contactID, firstName:first, lastName:last, phone:phone, email:email};
   editContactApi(payload)
     .then(() => {
       tr.querySelector('.c-first').textContent = first;
@@ -401,23 +400,37 @@ function restoreRowButtons(tr) {
 }
 
 // XHR wrapper reused by saveEditFields
-function editContactApi(payload){
+function editContactApi(payload)
+{
   return new Promise((resolve, reject) => {
+    const jsonPayload = JSON.stringify(payload);
     const url = urlBase + '/editContact.' + extension;
+
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Content-type','application/json; charset=UTF-8');
-    xhr.onreadystatechange = function(){
-      if (this.readyState === 4){
-        if (this.status === 200){
-          const res = JSON.parse(xhr.responseText || '{}');
-          if (res.error) reject(res.error); else resolve(res);
-        } else {
-          reject('Network error');
-        }
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    xhr.onreadystatechange = function() 
+    {
+      if (xhr.readyState === 4)
+      {
+        if (xhr.status === 200) 
+        {
+          try 
+          {
+            const res = JSON.parse(xhr.responseText || "{}");
+            if (res.error) reject(res.error);
+            else resolve(res);
+          } catch (err) {
+            reject("Invalid JSON response");
+          }
+        }    
+        else
+          reject("Network error: " + xhr.status);
       }
     };
-    xhr.send(JSON.stringify(payload));
+    xhr.onerror = () => reject("Network request failed");
+    xhr.send(jsonPayload);
   });
 }
 
