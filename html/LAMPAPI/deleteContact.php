@@ -42,7 +42,7 @@
 	
 	function returnWithMessage($message)
 	{
-		$retValue = '{"error":'. $message .'}';
+		$retValue = '{"error":"'. $message .'"}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
